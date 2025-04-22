@@ -1,28 +1,23 @@
 baseURL = "https://example.com"
 languageCode = "ja-jp"
-title = "RURI AND FOX"
+title = "Ruri and Fox"
 theme = "PaperMod"
 
 [params]
   description = "家族の知恵で楽しく生きる未来を創る"
-  author = "RURI AND FOX"
-  mainSections = ["company", "services", "contact"]
+  author = "Ruri and Fox"
+  mainSections = ["services", "contact"]
   defaultTheme = "light"
   disableThemeToggle = true
 
 [menu]
   [[menu.main]]
-    identifier = "company"
-    name = "Company"
-    url = "/company/"
-    weight = 1
-  [[menu.main]]
     identifier = "services"
     name = "Services"
-    url = "/services/"
-    weight = 2
+    url = "/#services"
+    weight = 1
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
-    url = "/contact/"
-    weight = 3 
+    url = "/#contact"
+    weight = 2 

@@ -1,5 +1,5 @@
 ---
-title: "RURI AND FOX"
+title: "Ruri and Fox"
 description: "家族の知恵で楽しく生きる未来を創る"
 ---
 
@@ -14,7 +14,7 @@ description: "家族の知恵で楽しく生きる未来を創る"
     </p>
   </div>
   <div class="hero-image">
-    <img src="/images/about-ruri-fox.png" alt="RURI AND FOX">
+    <img src="/images/about-ruri-fox.png" alt="Ruri and Fox">
   </div>
 </section>
 
@@ -73,6 +73,38 @@ description: "家族の知恵で楽しく生きる未来を創る"
     <div class="news-content">
       <p class="coming-soon">coming soon!</p>
     </div>
+  </div>
+</section>
+
+<!-- お問い合わせセクション -->
+<section class="contact-section" id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p>
+    サービスや製品に関するご質問、お問い合わせは以下のフォームよりお寄せください。
+  </p>
+  
+  <div class="contact-form">
+    <form id="contact-form" action="mailto:support@ruriandfox.com" method="POST" enctype="text/plain">
+
+      <div class="form-group">
+        <label for="email">メールアドレス <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="subject">件名 <span class="required">*</span></label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <button type="submit" class="submit-button">送信する</button>
+      </div>
+    </form>
   </div>
 </section>
 {{< /rawhtml >}}
