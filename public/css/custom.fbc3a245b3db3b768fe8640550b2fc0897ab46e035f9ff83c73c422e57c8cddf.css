@@ -1,0 +1,735 @@
+/* カスタムスタイルシート */
+
+:root {
+  --background-color: white;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --primary-color: #000080;
+  --secondary-color: #6aa84f;
+  --accent-color: #f9cb9c;
+  --text-color: #000080;
+}
+
+/* PaperModテーマの上書き */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: white !important;
+  color: #000080 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+  overflow-x: hidden;
+}
+
+html {
+  background-color: white !important;
+}
+
+/* テーマの色を強制的に上書きする */
+h1, h2, h3, h4, h5, h6 {
+  color: #000080 !important;
+}
+
+.post-title {
+  color: #000080 !important;
+}
+
+.post-content {
+  color: #000080 !important;
+}
+
+/* ヘッダー */
+.header {
+  background-color: white !important;
+  border-bottom: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.header > .container {
+  max-width: 1200px !important;
+  width: 100% !important;
+}
+
+/* コンテナのmax-width制限の解除 */
+.container {
+  max-width: 1200px !important;
+  width: 100% !important;
+  padding: 0 1rem !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+/* メインコンテンツエリア */
+.main {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.post, .article, .content {
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 0 1rem !important;
+  box-sizing: border-box !important;
+}
+
+/* メニュー */
+.nav {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.menu {
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* ナビゲーション */
+.nav a, .menu a {
+  color: #000080 !important;
+}
+
+/* フッター */
+.footer {
+  background-color: #000080 !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  padding: 2rem 0.5rem !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  left: 0 !important;
+  right: 0 !important;
+  position: relative !important;
+}
+
+.footer * {
+  color: white !important;
+}
+
+/* リスト */
+.post-content ul, .post-content ol {
+  color: #000080 !important;
+}
+
+/* リンク */
+a {
+  color: #000080 !important;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* フッターのリンク */
+.footer a {
+  color: white !important;
+}
+
+.footer a:hover {
+  opacity: 0.8;
+}
+
+/* セクション間の余白 */
+section {
+  padding: 3rem 0;
+  width: 100% !important;
+}
+
+/* ヘッダー要素 */
+.header a {
+  color: var(--primary-color) !important;
+}
+
+.nav-item, .nav-link {
+  color: var(--primary-color) !important;
+}
+
+/* テーマ固有のクラスに対する上書き */
+.post-title, .post-content, .post-meta, 
+.post-description, .post-content p, 
+.post-content li, .post-content h1, 
+.post-content h2, .post-content h3, 
+.post-content h4, .post-content h5, 
+.post-content h6, .post-content a {
+  color: var(--primary-color) !important;
+}
+
+/* サイト名 */
+.site-title, .site-description {
+  color: var(--primary-color) !important;
+}
+
+/* ヒーローセクション */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70vh;
+  padding: 3rem 1rem !important;
+  background-color: var(--background-color);
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  flex-wrap: wrap;
+  border-bottom: none !important;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 2rem;
+  min-width: 300px;
+  text-align: left !important;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-align: left !important;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: var(--primary-color);
+  text-align: left !important;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* サービスセクション */
+.services-section {
+  padding: 5rem 1rem !important;
+  background-color: var(--background-color);
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.service-card {
+  flex: 1 1 300px;
+  max-width: 320px;
+  min-width: 280px;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+  background-color: var(--background-color) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 1rem !important;
+  position: relative !important;
+}
+
+.service-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.service-image {
+  width: 100% !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: var(--background-color) !important;
+  padding: 1rem !important;
+  border-bottom: none !important;
+}
+
+.service-img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  transition: none !important;
+}
+
+.service-card:hover .service-img {
+  transform: none !important;
+}
+
+.service-badge {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 20px !important;
+  font-weight: bold !important;
+  z-index: 10 !important;
+  box-shadow: none !important;
+  font-size: 0.85rem !important;
+}
+
+.service-content {
+  flex: 1 !important;
+  padding: 1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background-color: var(--background-color) !important;
+  text-align: center !important;
+}
+
+.service-content h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.service-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.service-button {
+  margin-top: auto !important;
+  background-color: var(--primary-color) !important;
+  border-radius: 5px !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  width: 100% !important;
+  box-shadow: none !important;
+}
+
+.service-button a,
+.service-button span {
+  display: block !important;
+  padding: 0.8rem 1.5rem !important;
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+.service-button a:hover {
+  background-color: var(--primary-color) !important;
+  opacity: 0.9 !important;
+  text-decoration: none !important;
+}
+
+.service-button.disabled {
+  background-color: #7986cb;
+  cursor: not-allowed;
+}
+
+/* ニュースセクション */
+.news-section {
+  padding: 5rem 1rem !important;
+  background-color: var(--background-color);
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+.news-content {
+  text-align: center;
+  width: 100% !important;
+}
+
+.coming-soon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* ボタンスタイル */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #000066;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #599b3e;
+}
+
+/* アプリ詳細ページのスタイル */
+.app-detail {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 2rem 1rem !important;
+  background-color: var(--background-color);
+  box-sizing: border-box !important;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.app-logo {
+  width: 120px;
+  height: auto;
+  margin-right: 2rem;
+}
+
+.app-header-content h1 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.app-tagline {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.app-description h2 {
+  margin: 2rem 0 1rem;
+  color: var(--primary-color);
+}
+
+.app-description p {
+  color: var(--primary-color);
+}
+
+.app-description ul {
+  padding-left: 1.5rem;
+  color: var(--primary-color);
+}
+
+.app-description li {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* 会社情報のスタイル */
+.company-section {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 2rem 1rem !important;
+  background-color: var(--background-color);
+  box-sizing: border-box !important;
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.company-table th,
+.company-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  color: var(--primary-color);
+}
+
+.company-table th {
+  width: 25%;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+.company-info ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: var(--primary-color);
+}
+
+.company-info li {
+  color: var(--primary-color);
+}
+
+/* お問い合わせフォームのスタイル */
+.contact-section {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 2rem 1rem !important;
+  background-color: var(--background-color);
+  box-sizing: border-box !important;
+}
+
+.contact-form {
+  margin: 2rem 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: var(--primary-color);
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+}
+
+.contact-info {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+}
+
+.contact-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: var(--primary-color);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 0;
+    text-align: left !important;
+  }
+  
+  .hero-buttons {
+    justify-content: flex-start !important;
+  }
+  
+  .hero-image {
+    max-width: 70%;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  
+  .service-card {
+    flex: 1 1 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+    text-align: left !important;
+  }
+  
+  .hero-content p {
+    text-align: left !important;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .app-logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .company-table th {
+    width: 35%;
+  }
+  
+  .container, .main, .post, .article, .content {
+    padding: 0 0.25rem !important;
+  }
+  
+  .hero-section, .services-section, .news-section {
+    padding: 2rem 0.5rem !important;
+  }
+  
+  .hero-image {
+    max-width: 80%;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  
+  .service-card {
+    flex: 1 1 100%;
+    max-width: 280px;
+  }
+}
+
+/* PaperModテーマの上書き */
+.page-header, .page-footer, .page-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.page-header > *, .page-content > *, .post > * {
+  max-width: 1000px !important;
+  width: 100% !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  box-sizing: border-box !important;
+}
+
+/* グリッドレイアウトの調整 */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  width: 100% !important;
+}
+
+/* フッター内の要素も幅を100%に */
+.footer-content, 
+.footer-section, 
+.copyright, 
+.footer .menu,
+.footer .container {
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .service-card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .service-card {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .app-logo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .company-table th {
+    width: 35%;
+  }
+  
+  .container, .main, .post, .article, .content {
+    padding: 0 0.25rem !important;
+  }
+  
+  .hero-section, .services-section, .news-section {
+    padding: 2rem 0.5rem !important;
+  }
+  
+  .hero-image {
+    max-width: 80%;
+  }
+}
