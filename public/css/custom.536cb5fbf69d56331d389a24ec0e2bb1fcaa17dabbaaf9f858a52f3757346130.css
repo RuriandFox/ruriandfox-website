@@ -526,10 +526,42 @@ section {
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
 .submit-button:hover {
   opacity: 0.9;
+}
+
+.submit-button:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* 送信メッセージのスタイル */
+.submit-message {
+  text-align: center;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+.submit-message p {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.success-message {
+  color: #27ae60 !important;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #e74c3c !important;
+  font-weight: bold;
 }
 
 .contact-info {
@@ -746,4 +778,16 @@ section {
   padding: 1rem 1rem !important;
   background-color: var(--background-color);
   box-sizing: border-box !important;
+}
+
+/* reCAPTCHAのスタイル */
+.g-recaptcha {
+  margin: 1rem 0;
+}
+
+.g-recaptcha + small {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--primary-color);
+  font-size: 0.85rem;
 }
