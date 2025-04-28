@@ -89,6 +89,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ナビゲーション */
 .nav a, .menu a {
   color: #000080 !important;
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
 }
 
 /* フッター */
@@ -136,6 +138,7 @@ a:hover {
 section {
   padding: 0.5rem 0;
   width: 100% !important;
+  margin-bottom: 1rem !important;
 }
 
 /* ヘッダー要素 */
@@ -158,8 +161,10 @@ section {
 }
 
 /* サイト名 */
-.site-title, .site-description {
+.site-title, .site-description, .logo a {
   color: var(--primary-color) !important;
+  font-size: 1.4rem !important;
+  font-weight: bold !important;
 }
 
 /* ヒーローセクション */
@@ -167,8 +172,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 70vh;
-  padding: 1.5rem 1rem !important;
+  min-height: 50vh;
+  padding: 1rem 1rem !important;
   background-color: var(--background-color);
   width: 100% !important;
   max-width: 1000px !important;
@@ -570,13 +575,14 @@ section {
   
   .hero-section {
     min-height: auto;
-    padding: 1rem 0.5rem !important;
+    padding: 0.5rem !important;
     flex-direction: column;
     gap: 0;
+    margin-top: 0 !important;
   }
   
   .hero-content {
-    padding-right: 0;
+    padding: 0 !important;
     min-width: 100%;
     text-align: center !important;
     order: 1;
@@ -584,32 +590,58 @@ section {
   
   .hero-content h1 {
     text-align: center !important;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem !important;
+    font-size: 1.8rem !important;
   }
   
   .hero-content p {
     text-align: center !important;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem !important;
+    font-size: 0.95rem !important;
   }
   
   .hero-image {
-    max-width: 80%;
+    max-width: 60% !important;
     order: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem !important;
   }
   
   .hero-image img {
-    max-height: 180px;
+    max-height: 150px !important;
   }
   
   .service-card {
     min-width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
   }
   
   .section-title {
     font-size: var(--font-size-xlarge);
-    margin: 1.5rem 0;
+    margin: 0.5rem 0 !important;
+  }
+
+  /* ヘッダー */
+  .header {
+    padding: 0.5rem 0 !important;
+  }
+
+  .logo a {
+    font-size: 1.2rem !important;
+  }
+
+  .nav a, .menu a {
+    font-size: 1rem !important;
+  }
+
+  /* ニュースセクション */
+  .news-section {
+    padding: 0 0.5rem !important;
+  }
+
+  /* サービスセクション */
+  .services-section {
+    padding: 0 0.5rem !important;
+    margin-top: 0 !important;
   }
 }
 
