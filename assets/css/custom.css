@@ -578,70 +578,108 @@ section {
 }
 
 /* メディアクエリ - スマホ向け (小さいサイズ) */
-@media only screen and (max-width: 600px) {
-  /* テスト用に背景色を変更 */
+@media (max-width: 600px) {
+  /* スマホのフォントを1.5倍に */
   body {
-    background-color: #ffffcc !important; /* 黄色っぽい背景に */
-    font-size: 21px !important;
+    font-size: calc(var(--font-size-base) * 1.5) !important;
   }
   
-  /* 具体的にクラスを指定してフォントサイズを大きくする */
+  :root {
+    --font-size-base: 14px;
+    --font-size-large: calc(1.1rem * 1.5);
+    --font-size-xlarge: calc(1.5rem * 1.5);
+    --font-size-xxlarge: calc(2.2rem * 1.5);
+  }
+  
+  /* ナビゲーションのフォントサイズも拡大 */
+  .nav a, .menu a {
+    font-size: calc(1rem * 1.5) !important;
+  }
+  
+  .logo a {
+    font-size: calc(1.2rem * 1.5) !important;
+  }
+  
+  /* 他のテキスト要素も拡大 */
   .hero-content h1 {
-    font-size: 2.7rem !important;
-    line-height: 1.2 !important;
-    color: #ff3333 !important; /* 赤い文字に */
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
+    font-size: calc(1.8rem * 1.5) !important;
   }
   
   .hero-content p {
-    font-size: 1.43rem !important;
-    line-height: 1.4 !important;
-    color: #0000ff !important; /* 青い文字に */
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
+    font-size: calc(0.95rem * 1.5) !important;
   }
   
-  /* 残りのコードはそのまま */
   .section-title {
-    font-size: 2.25rem !important; /* 1.5rem × 1.5 */
-    margin: 0.75rem 0 !important;
+    font-size: calc(var(--font-size-xlarge) * 1.5) !important;
   }
   
-  /* サービスカード内のテキスト */
   .service-content h3 {
-    font-size: 2.1rem !important; /* 1.4rem × 1.5 */
+    font-size: calc(1.4rem * 1.5) !important;
   }
   
   .service-content p {
-    font-size: 1.5rem !important; /* 1rem × 1.5 */
+    font-size: calc(1rem * 1.5) !important;
   }
   
-  /* ボタンのテキスト */
   .service-button a,
   .service-button span {
-    font-size: 1.5rem !important;
-    padding: 1rem 1.5rem !important;
+    font-size: calc(1rem * 1.5) !important;
   }
   
-  /* ヘッダーのテキスト */
-  .nav a, .menu a, 
-  .logo a, .site-title {
-    font-size: 1.8rem !important; /* 1.2rem × 1.5 */
-  }
-  
-  /* Googleフォームの調整 */
+  /* Googleフォームの横幅を調整 */
   .google-form-container iframe {
     width: 100% !important;
-    transform: scale(0.9) !important; /* モバイルでは少し縮小して見やすく */
-    transform-origin: top center !important;
   }
   
-  /* 隙間対策 - 必要に応じてコメントアウト解除 */
   .hero-section {
+    min-height: auto;
     padding: 0.5rem !important;
-    margin: 0 !important;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0 !important;
   }
   
-  .services-section, .news-section, .contact-section {
-    padding: 0.5rem !important;
-    margin: 0.5rem 0 !important;
+  .hero-content {
+    padding: 0 !important;
+    min-width: 100%;
+    text-align: center !important;
+    order: 1;
+  }
+  
+  .hero-image {
+    max-width: 60% !important;
+    order: 0;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .hero-image img {
+    max-height: 150px !important;
+  }
+  
+  .service-card {
+    min-width: 100%;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* ヘッダー */
+  .header {
+    padding: 0.5rem 0 !important;
+  }
+
+  .container, .main, .post, .article, .content {
+    padding: 0 0.25rem !important;
+  }
+  
+  .hero-section, .services-section, .news-section {
+    padding: 1rem 0.5rem !important;
+  }
+  
+  .hero-image {
+    max-width: 80%;
   }
 }
 
