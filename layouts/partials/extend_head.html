@@ -1,3 +1,16 @@
+<!-- ファビコン設定 -->
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon.ico">
+
+<!-- OGP設定 -->
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}images/og-image.png">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:description" content="私たちの身近な人の便利・楽しいをカタチにしてお届けします。アプリとか動画とか・・・。30代子持ちの夫婦の会社です。">
+<meta property="og:locale" content="ja_JP">
+
 <!-- カスタムスタイルを追加 -->
 <style>
   :root {
