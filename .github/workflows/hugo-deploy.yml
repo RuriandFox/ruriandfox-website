@@ -4,10 +4,20 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+# GitHub Pagesへのデプロイ権限を設定
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
 
     steps:
       - name: Checkout
@@ -30,4 +40,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          cname: ruriandfox.com 
+          cname: ruriandfox.com
+          force_orphan: true 
