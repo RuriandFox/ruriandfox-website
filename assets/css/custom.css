@@ -7,6 +7,13 @@
   --secondary-color: #6aa84f;
   --accent-color: #f9cb9c;
   --text-color: #000080;
+  --font-size-base: 16px;
+  --font-size-large: 1.25rem;
+  --font-size-xlarge: 2rem;
+  --font-size-xxlarge: 3rem;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
 }
 
 /* PaperModテーマの上書き */
@@ -16,12 +23,15 @@ body {
   color: #000080 !important;
   margin: 0 !important;
   padding: 0 !important;
-  width: 100vw !important;
+  width: 100% !important;
+  max-width: 100% !important;
   overflow-x: hidden;
+  font-size: var(--font-size-base);
 }
 
 html {
   background-color: white !important;
+  scroll-behavior: smooth;
 }
 
 /* テーマの色を強制的に上書きする */
@@ -166,17 +176,19 @@ section {
   box-sizing: border-box !important;
   flex-wrap: wrap;
   border-bottom: none !important;
+  gap: 1rem;
 }
 
 .hero-content {
   flex: 1;
-  padding-right: 2rem;
-  min-width: 300px;
+  padding-right: 1rem;
+  min-width: 280px;
   text-align: left !important;
+  max-width: 600px;
 }
 
 .hero-content h1 {
-  font-size: 3.2rem;
+  font-size: var(--font-size-xxlarge);
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -184,8 +196,8 @@ section {
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: var(--font-size-large);
+  margin-bottom: 1.5rem;
   line-height: 1.6;
   color: var(--primary-color);
   text-align: left !important;
@@ -547,82 +559,107 @@ section {
   color: var(--primary-color);
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 992px) {
+/* メディアクエリ - スマホ向け (小さいサイズ) */
+@media (max-width: 600px) {
+  :root {
+    --font-size-base: 14px;
+    --font-size-large: 1.1rem;
+    --font-size-xlarge: 1.5rem;
+    --font-size-xxlarge: 2.2rem;
+  }
+  
   .hero-section {
+    min-height: auto;
+    padding: 1rem 0.5rem !important;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0;
   }
   
   .hero-content {
     padding-right: 0;
-    margin-bottom: 0;
-    text-align: left !important;
+    min-width: 100%;
+    text-align: center !important;
+    order: 1;
   }
   
-  .hero-buttons {
-    justify-content: flex-start !important;
-  }
-  
-  .hero-image {
-    max-width: 70%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    align-self: center !important;
-  }
-  
-  .service-card {
-    flex: 1 1 100%;
-    max-width: 300px;
-  }
-}
-
-@media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.5rem;
-    text-align: left !important;
-  }
-  
-  .hero-content p {
-    text-align: left !important;
-  }
-  
-  .section-title {
-    font-size: 1.8rem;
-  }
-  
-  .app-header {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .app-logo {
-    margin-right: 0;
+    text-align: center !important;
     margin-bottom: 1rem;
   }
   
-  .company-table th {
-    width: 35%;
-  }
-  
-  .container, .main, .post, .article, .content {
-    padding: 0 0.25rem !important;
-  }
-  
-  .hero-section, .services-section, .news-section {
-    padding: 1rem 0.5rem !important;
+  .hero-content p {
+    text-align: center !important;
+    margin-bottom: 1rem;
   }
   
   .hero-image {
     max-width: 80%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    align-self: center !important;
+    order: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-image img {
+    max-height: 180px;
   }
   
   .service-card {
+    min-width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .section-title {
+    font-size: var(--font-size-xlarge);
+    margin: 1.5rem 0;
+  }
+}
+
+/* メディアクエリ - タブレット向け */
+@media (min-width: 601px) and (max-width: 900px) {
+  :root {
+    --font-size-base: 15px;
+    --font-size-large: 1.15rem;
+    --font-size-xlarge: 1.75rem;
+    --font-size-xxlarge: 2.5rem;
+  }
+  
+  .hero-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem !important;
+    gap: 1rem;
+  }
+  
+  .hero-content {
     flex: 1 1 100%;
-    max-width: 280px;
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-image {
+    max-width: 60%;
+  }
+  
+  .service-card {
+    flex: 1 1 45%;
+    min-width: 250px;
+  }
+}
+
+/* メディアクエリ - デスクトップ向け */
+@media (min-width: 901px) {
+  .hero-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .hero-content {
+    flex: 1 1 55%;
+  }
+  
+  .hero-image {
+    flex: 0 0 40%;
   }
 }
 
