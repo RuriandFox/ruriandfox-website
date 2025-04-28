@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav a, .menu a {
   color: #000080 !important;
   font-size: 1.2rem !important;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
 }
 
 /* フッター */
@@ -564,13 +564,75 @@ section {
   color: var(--primary-color);
 }
 
+/* Googleフォームコンテナを中央揃えに */
+.google-form-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.google-form-container iframe {
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
 /* メディアクエリ - スマホ向け (小さいサイズ) */
 @media (max-width: 600px) {
+  /* スマホのフォントを1.5倍に */
+  body {
+    font-size: calc(var(--font-size-base) * 1.5) !important;
+  }
+  
   :root {
     --font-size-base: 14px;
-    --font-size-large: 1.1rem;
-    --font-size-xlarge: 1.5rem;
-    --font-size-xxlarge: 2.2rem;
+    --font-size-large: calc(1.1rem * 1.5);
+    --font-size-xlarge: calc(1.5rem * 1.5);
+    --font-size-xxlarge: calc(2.2rem * 1.5);
+  }
+  
+  /* ナビゲーションのフォントサイズも拡大 */
+  .nav a, .menu a {
+    font-size: calc(1rem * 1.5) !important;
+  }
+  
+  .logo a {
+    font-size: calc(1.2rem * 1.5) !important;
+  }
+  
+  /* 他のテキスト要素も拡大 */
+  .hero-content h1 {
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
+    font-size: calc(1.8rem * 1.5) !important;
+  }
+  
+  .hero-content p {
+    text-align: center !important;
+    margin-bottom: 0.5rem !important;
+    font-size: calc(0.95rem * 1.5) !important;
+  }
+  
+  .section-title {
+    font-size: calc(var(--font-size-xlarge) * 1.5) !important;
+  }
+  
+  .service-content h3 {
+    font-size: calc(1.4rem * 1.5) !important;
+  }
+  
+  .service-content p {
+    font-size: calc(1rem * 1.5) !important;
+  }
+  
+  .service-button a,
+  .service-button span {
+    font-size: calc(1rem * 1.5) !important;
+  }
+  
+  /* Googleフォームの横幅を調整 */
+  .google-form-container iframe {
+    width: 100% !important;
   }
   
   .hero-section {
@@ -588,18 +650,6 @@ section {
     order: 1;
   }
   
-  .hero-content h1 {
-    text-align: center !important;
-    margin-bottom: 0.5rem !important;
-    font-size: 1.8rem !important;
-  }
-  
-  .hero-content p {
-    text-align: center !important;
-    margin-bottom: 0.5rem !important;
-    font-size: 0.95rem !important;
-  }
-  
   .hero-image {
     max-width: 60% !important;
     order: 0;
@@ -615,33 +665,21 @@ section {
     margin-bottom: 1rem !important;
   }
   
-  .section-title {
-    font-size: var(--font-size-xlarge);
-    margin: 0.5rem 0 !important;
-  }
-
   /* ヘッダー */
   .header {
     padding: 0.5rem 0 !important;
   }
 
-  .logo a {
-    font-size: 1.2rem !important;
+  .container, .main, .post, .article, .content {
+    padding: 0 0.25rem !important;
   }
-
-  .nav a, .menu a {
-    font-size: 1rem !important;
+  
+  .hero-section, .services-section, .news-section {
+    padding: 1rem 0.5rem !important;
   }
-
-  /* ニュースセクション */
-  .news-section {
-    padding: 0 0.5rem !important;
-  }
-
-  /* サービスセクション */
-  .services-section {
-    padding: 0 0.5rem !important;
-    margin-top: 0 !important;
+  
+  .hero-image {
+    max-width: 80%;
   }
 }
 
@@ -806,6 +844,10 @@ section {
 .header > .container {
   max-width: 1000px !important;
   width: 100% !important;
+}
+
+.logo a {
+  font-weight: 700 !important;
 }
 
 /* About セクションのスタイル */
