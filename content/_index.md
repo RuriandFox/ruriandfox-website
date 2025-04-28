@@ -85,8 +85,8 @@ description: "家族の知恵で楽しく生きる未来を創る"
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc300lbwD0aL_L21uAOeicPUeyQwLfbPtknODmk1kCj5LqQGw/viewform?embedded=true" width="640" height="813" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
   </div>
   
-  <div class="privacy-notice">
+  <!-- <div class="privacy-notice">
     <p>※ 個人情報の取り扱いについては<a href="#">プライバシーポリシー</a>をご確認ください</p>
-  </div>
+  </div> -->
 </section>
 {{< /rawhtml >}}
