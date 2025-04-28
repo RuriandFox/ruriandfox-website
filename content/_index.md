@@ -44,8 +44,8 @@ description: "家族の知恵で楽しく生きる未来を創る"
       <div class="service-content">
         <h3>カウンセルメイト</h3>
         <p>心理カウンセラー向け<br>レポート作成支援アプリ</p>
-        <div class="service-button">
-          <a href="https://apps.apple.com/" target="_blank">無料ダウンロード</a>
+        <div class="service-button disabled">
+          <span>coming soon</span>
         </div>
       </div>
     </div>
@@ -58,8 +58,8 @@ description: "家族の知恵で楽しく生きる未来を創る"
       <div class="service-content">
         <h3>ベイビーサイン</h3>
         <p>ベイビーサインが学べる<br>動画など</p>
-        <div class="service-button">
-          <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+        <div class="service-button disabled">
+          <span>coming soon</span>
         </div>
       </div>
     </div>
