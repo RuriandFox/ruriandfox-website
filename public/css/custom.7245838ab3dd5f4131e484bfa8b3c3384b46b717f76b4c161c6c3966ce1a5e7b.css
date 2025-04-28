@@ -7,6 +7,13 @@
   --secondary-color: #6aa84f;
   --accent-color: #f9cb9c;
   --text-color: #000080;
+  --font-size-base: 16px;
+  --font-size-large: 1.25rem;
+  --font-size-xlarge: 2rem;
+  --font-size-xxlarge: 3rem;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
 }
 
 /* PaperModテーマの上書き */
@@ -16,12 +23,15 @@ body {
   color: #000080 !important;
   margin: 0 !important;
   padding: 0 !important;
-  width: 100vw !important;
+  width: 100% !important;
+  max-width: 100% !important;
   overflow-x: hidden;
+  font-size: var(--font-size-base);
 }
 
 html {
   background-color: white !important;
+  scroll-behavior: smooth;
 }
 
 /* テーマの色を強制的に上書きする */
@@ -79,6 +89,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ナビゲーション */
 .nav a, .menu a {
   color: #000080 !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
 }
 
 /* フッター */
@@ -126,6 +138,7 @@ a:hover {
 section {
   padding: 0.5rem 0;
   width: 100% !important;
+  margin-bottom: 1rem !important;
 }
 
 /* ヘッダー要素 */
@@ -148,8 +161,10 @@ section {
 }
 
 /* サイト名 */
-.site-title, .site-description {
+.site-title, .site-description, .logo a {
   color: var(--primary-color) !important;
+  font-size: 1.4rem !important;
+  font-weight: bold !important;
 }
 
 /* ヒーローセクション */
@@ -157,8 +172,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 70vh;
-  padding: 1.5rem 1rem !important;
+  min-height: 50vh;
+  padding: 1rem 1rem !important;
   background-color: var(--background-color);
   width: 100% !important;
   max-width: 1000px !important;
@@ -166,17 +181,19 @@ section {
   box-sizing: border-box !important;
   flex-wrap: wrap;
   border-bottom: none !important;
+  gap: 1rem;
 }
 
 .hero-content {
   flex: 1;
-  padding-right: 2rem;
-  min-width: 300px;
+  padding-right: 1rem;
+  min-width: 280px;
   text-align: left !important;
+  max-width: 600px;
 }
 
 .hero-content h1 {
-  font-size: 3.2rem;
+  font-size: var(--font-size-xxlarge);
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -184,8 +201,8 @@ section {
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: var(--font-size-large);
+  margin-bottom: 1.5rem;
   line-height: 1.6;
   color: var(--primary-color);
   text-align: left !important;
@@ -547,82 +564,134 @@ section {
   color: var(--primary-color);
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 992px) {
-  .hero-section {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .hero-content {
-    padding-right: 0;
-    margin-bottom: 0;
-    text-align: left !important;
-  }
-  
-  .hero-buttons {
-    justify-content: flex-start !important;
-  }
-  
-  .hero-image {
-    max-width: 70%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    align-self: center !important;
-  }
-  
-  .service-card {
-    flex: 1 1 100%;
-    max-width: 300px;
-  }
+/* Googleフォームコンテナを中央揃えに */
+.google-form-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
 }
 
-@media (max-width: 768px) {
+.google-form-container iframe {
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* メディアクエリ - スマホ向け (小さいサイズ) */
+@media only screen and (max-width: 600px) {
+  /* テスト用に背景色を変更 */
+  body {
+    background-color: #ffffcc !important; /* 黄色っぽい背景に */
+    font-size: 21px !important;
+  }
+  
+  /* 具体的にクラスを指定してフォントサイズを大きくする */
   .hero-content h1 {
-    font-size: 2.5rem;
-    text-align: left !important;
+    font-size: 2.7rem !important;
+    line-height: 1.2 !important;
+    color: #ff3333 !important; /* 赤い文字に */
   }
   
   .hero-content p {
-    text-align: left !important;
+    font-size: 1.43rem !important;
+    line-height: 1.4 !important;
+    color: #0000ff !important; /* 青い文字に */
   }
   
+  /* 残りのコードはそのまま */
   .section-title {
-    font-size: 1.8rem;
+    font-size: 2.25rem !important; /* 1.5rem × 1.5 */
+    margin: 0.75rem 0 !important;
   }
   
-  .app-header {
-    flex-direction: column;
-    text-align: center;
+  /* サービスカード内のテキスト */
+  .service-content h3 {
+    font-size: 2.1rem !important; /* 1.4rem × 1.5 */
   }
   
-  .app-logo {
-    margin-right: 0;
+  .service-content p {
+    font-size: 1.5rem !important; /* 1rem × 1.5 */
+  }
+  
+  /* ボタンのテキスト */
+  .service-button a,
+  .service-button span {
+    font-size: 1.5rem !important;
+    padding: 1rem 1.5rem !important;
+  }
+  
+  /* ヘッダーのテキスト */
+  .nav a, .menu a, 
+  .logo a, .site-title {
+    font-size: 1.8rem !important; /* 1.2rem × 1.5 */
+  }
+  
+  /* Googleフォームの調整 */
+  .google-form-container iframe {
+    width: 100% !important;
+    transform: scale(0.9) !important; /* モバイルでは少し縮小して見やすく */
+    transform-origin: top center !important;
+  }
+  
+  /* 隙間対策 - 必要に応じてコメントアウト解除 */
+  .hero-section {
+    padding: 0.5rem !important;
+    margin: 0 !important;
+  }
+  
+  .services-section, .news-section, .contact-section {
+    padding: 0.5rem !important;
+    margin: 0.5rem 0 !important;
+  }
+}
+
+/* メディアクエリ - タブレット向け */
+@media (min-width: 601px) and (max-width: 900px) {
+  :root {
+    --font-size-base: 15px;
+    --font-size-large: 1.15rem;
+    --font-size-xlarge: 1.75rem;
+    --font-size-xxlarge: 2.5rem;
+  }
+  
+  .hero-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem !important;
+    gap: 1rem;
+  }
+  
+  .hero-content {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding-right: 0;
     margin-bottom: 1rem;
   }
   
-  .company-table th {
-    width: 35%;
-  }
-  
-  .container, .main, .post, .article, .content {
-    padding: 0 0.25rem !important;
-  }
-  
-  .hero-section, .services-section, .news-section {
-    padding: 1rem 0.5rem !important;
-  }
-  
   .hero-image {
-    max-width: 80%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    align-self: center !important;
+    max-width: 60%;
   }
   
   .service-card {
-    flex: 1 1 100%;
-    max-width: 280px;
+    flex: 1 1 45%;
+    min-width: 250px;
+  }
+}
+
+/* メディアクエリ - デスクトップ向け */
+@media (min-width: 901px) {
+  .hero-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .hero-content {
+    flex: 1 1 55%;
+  }
+  
+  .hero-image {
+    flex: 0 0 40%;
   }
 }
 
@@ -737,6 +806,10 @@ section {
 .header > .container {
   max-width: 1000px !important;
   width: 100% !important;
+}
+
+.logo a {
+  font-weight: 700 !important;
 }
 
 /* About セクションのスタイル */

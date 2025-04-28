@@ -1,6 +1,52 @@
 <!-- ビューポート設定 -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
+<!-- インラインスタイル（スマホ向け）- 最も優先度が高い -->
+<style>
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #ffffcc !important;
+    font-size: 21px !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.7rem !important;
+    line-height: 1.2 !important;
+    color: #ff3333 !important;
+  }
+  
+  .hero-content p {
+    font-size: 1.43rem !important;
+    line-height: 1.4 !important;
+    color: #0000ff !important;
+  }
+  
+  .section-title {
+    font-size: 2.25rem !important;
+    margin: 0.75rem 0 !important;
+  }
+  
+  .service-content h3 {
+    font-size: 2.1rem !important;
+  }
+  
+  .service-content p {
+    font-size: 1.5rem !important;
+  }
+  
+  .service-button a,
+  .service-button span {
+    font-size: 1.5rem !important;
+    padding: 1rem 1.5rem !important;
+  }
+  
+  .nav a, .menu a, 
+  .logo a, .site-title {
+    font-size: 1.8rem !important;
+  }
+}
+</style>
+
 <!-- ファビコン設定 -->
 <link rel="icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/favicon.ico">
