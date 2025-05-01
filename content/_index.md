@@ -28,8 +28,8 @@ description: "家族の知恵で楽しく生きる未来を創る"
         <img src="/images/exam-support.png" alt="小学校受験の見方" class="service-img">
       </div>
       <div class="service-content">
-        <h3>小学校受験のミカタ</h3>
-        <p>やることをシンプルに<br>小学校受験の学習アプリ</p>
+        <h3>おべんきょうのミカタ</h3>
+        <p>やることをシンプルに<br>幼児学習、お受験のお役立ちアプリ</p>
         <div class="service-button disabled">
           <span>coming soon</span>
         </div>
