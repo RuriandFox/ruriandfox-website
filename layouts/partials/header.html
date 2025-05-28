@@ -6,11 +6,22 @@
       </div>
       <ul id="menu">
         {{- range site.Menus.main }}
+        {{- if eq .Identifier "terms" }}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            <span>{{ .Name }}</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="/terms">カウンセルメイト</a></li>
+          </ul>
+        </li>
+        {{- else }}
         <li>
           <a href="{{ .URL | absLangURL }}">
             <span>{{ .Name }}</span>
           </a>
         </li>
+        {{- end }}
         {{- end }}
       </ul>
     </nav>
@@ -57,6 +68,7 @@
   
   #menu li {
     margin-left: 2rem !important;
+    position: relative !important;
   }
   
   #menu li a {
@@ -67,6 +79,53 @@
   
   #menu li a:hover {
     text-decoration: underline !important;
+  }
+  
+  /* ドロップダウンスタイル */
+  .dropdown {
+    position: left !important;
+  }
+  
+  .dropdown-menu {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: white !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    min-width: 180px !important;
+    z-index: 1000 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0rem 0 !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block !important;
+  }
+  
+  .dropdown-menu li {
+    margin: 0 !important;
+  }
+  
+  .dropdown-menu li a {
+    display: block !important;
+    padding: 0.5rem 2rem 0.5rem 0rem !important;
+    color: #000080 !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    text-align: left !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #f5f5f5 !important;
+    text-decoration: none !important;
   }
   
   @media (max-width: 768px) {
@@ -84,6 +143,24 @@
       margin-left: 0 !important;
       margin-right: 1.5rem !important;
       margin-bottom: 0.5rem !important;
+    }
+    
+    .dropdown-menu {
+      position: static !important;
+      display: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      background-color: transparent !important;
+      padding: 0 !important;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+      display: block !important;
+    }
+    
+    .dropdown-menu li a {
+      padding: 0.25rem 0 !important;
+      font-size: 0.9rem !important;
     }
   }
 </style>

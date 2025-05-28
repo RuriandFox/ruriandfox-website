@@ -20,4 +20,9 @@ theme = "PaperMod"
     identifier = "contact"
     name = "Contact"
     url = "/#contact"
-    weight = 2 
+    weight = 2
+  [[menu.main]]
+    identifier = "terms"
+    name = "Terms & Policy"
+    url = "#"
+    weight = 3 

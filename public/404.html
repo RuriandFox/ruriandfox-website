@@ -2,8 +2,8 @@
 <html lang="en" dir="auto">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-<link rel="stylesheet" href="/css/custom.02647222c06c3bc1182c7a80903b2c75093188f3b35f4160e32a356cb92e5afb.css?v=1748439753">
-<link rel="stylesheet" href="/css/extended/custom-theme.ecf8e2494cd9e119dac062cc00b1ab6c36594020e653e8ef377246022d1ec8c3.css?v=1748439753">
+<link rel="stylesheet" href="/css/custom.02647222c06c3bc1182c7a80903b2c75093188f3b35f4160e32a356cb92e5afb.css?v=1748440577">
+<link rel="stylesheet" href="/css/extended/custom-theme.ecf8e2494cd9e119dac062cc00b1ab6c36594020e653e8ef377246022d1ec8c3.css?v=1748440577">
 </head>
 
 <body class="list" id="top"><header class="header">
@@ -22,6 +22,14 @@
           <a href="http://localhost:1313/#contact">
             <span>Contact</span>
           </a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            <span>Terms &amp; Policy</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="/terms">カウンセルメイト</a></li>
+          </ul>
         </li>
       </ul>
     </nav>
@@ -68,6 +76,7 @@
   
   #menu li {
     margin-left: 2rem !important;
+    position: relative !important;
   }
   
   #menu li a {
@@ -78,6 +87,53 @@
   
   #menu li a:hover {
     text-decoration: underline !important;
+  }
+  
+   
+  .dropdown {
+    position: left !important;
+  }
+  
+  .dropdown-menu {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: white !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    min-width: 180px !important;
+    z-index: 1000 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0rem 0 !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block !important;
+  }
+  
+  .dropdown-menu li {
+    margin: 0 !important;
+  }
+  
+  .dropdown-menu li a {
+    display: block !important;
+    padding: 0.5rem 2rem 0.5rem 0rem !important;
+    color: #000080 !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    text-align: left !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #f5f5f5 !important;
+    text-decoration: none !important;
   }
   
   @media (max-width: 768px) {
@@ -95,6 +151,24 @@
       margin-left: 0 !important;
       margin-right: 1.5rem !important;
       margin-bottom: 0.5rem !important;
+    }
+    
+    .dropdown-menu {
+      position: static !important;
+      display: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      background-color: transparent !important;
+      padding: 0 !important;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+      display: block !important;
+    }
+    
+    .dropdown-menu li a {
+      padding: 0.25rem 0 !important;
+      font-size: 0.9rem !important;
     }
   }
 </style>
@@ -114,8 +188,8 @@
         <ul>
           <li><a href="/#services">Services</a></li>
           <li><a href="/#contact">Contact</a></li>
-          <li><a href="/terms">Terms and Privacy policy</a></li>
-          <li style="margin-left: 1rem;">• カウンセルメイト</li>
+          <li>Terms and Privacy policy</li>
+          <li style="margin-left: 1rem;"><a href="/terms">• カウンセルメイト</a></li>
         </ul>
       </div>
     </div>
