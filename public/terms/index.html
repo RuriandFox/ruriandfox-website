@@ -2,8 +2,8 @@
 <html lang="en" dir="auto">
 
 <head>
-<link rel="stylesheet" href="/css/custom.02647222c06c3bc1182c7a80903b2c75093188f3b35f4160e32a356cb92e5afb.css?v=1748693573">
-<link rel="stylesheet" href="/css/extended/custom-theme.ecf8e2494cd9e119dac062cc00b1ab6c36594020e653e8ef377246022d1ec8c3.css?v=1748693573">
+<link rel="stylesheet" href="/css/custom.02647222c06c3bc1182c7a80903b2c75093188f3b35f4160e32a356cb92e5afb.css?v=1748693848">
+<link rel="stylesheet" href="/css/extended/custom-theme.ecf8e2494cd9e119dac062cc00b1ab6c36594020e653e8ef377246022d1ec8c3.css?v=1748693848">
 </head>
 
 <body class="" id="top"><header class="header">
@@ -188,7 +188,7 @@
   background: transparent;
 }
 
-.tab-button {
+.tabs-container .tab-button {
   flex: 1;
   padding: 15px 30px;
   background: transparent;
@@ -197,18 +197,18 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-  color: #222;
+  color: var(--primary) !important;
   transition: all 0.3s ease;
   position: relative;
 }
 
-.tab-button:hover {
+.tabs-container .tab-button:hover {
   background: #f8f9fa;
-  color: #000;
+  color: var(--primary) !important;
 }
 
-.tab-button.active {
-  color: #000;
+.tabs-container .tab-button.active {
+  color: var(--primary) !important;
   border-bottom-color: #007bff;
   background: #f8f9fa;
 }
@@ -272,9 +272,10 @@
     padding: 10px;
   }
   
-  .tab-button {
+  .tabs-container .tab-button {
     font-size: 14px;
     padding: 12px 15px;
+    color: var(--primary) !important;
   }
   
   .content-area {

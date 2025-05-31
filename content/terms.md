@@ -65,10 +65,9 @@ terms_content: |
   3. 送信されたデータはOpenAIのプライバシーポリシーに従って管理されます。当社はOpenAIとの間でデータ処理契約（DPA）の締結を行い、送信データがAIモデル学習に利用されないよう適切な措置を講じています。また、当社はFirebase等のクラウド委託先とも、適切なデータ処理契約またはこれに準じる措置を講じています。ユーザーは当該ポリシーに同意のうえでAI機能を利用するものとします。
   4. **OpenAIやGoogle等の委託先・サブプロセッサーにて国外で処理・保管される場合があり、DPA等に従い十分な保護措置が確保されます。**
   5. Cloud Functionsでは、エラー診断目的で通信の要約情報（時刻、HTTPステータス、エラーコード等）のみを記録します。入力内容や出力結果の本文は、意図的には記録しませんが、例外的にエラーログなどに一部が自動的に記録される可能性があります。
-     ・クラッシュレポート（Firebase Crashlytics） … 最大90日間保持
-     ・認証・通信ログ（Firebase Authentication、Realtime Database へのアクセスログ）
-       → Cloud Functions／Cloud Run から出力される一般的なアプリケーションログ（INFO, WARN, ERRORなど）は30日間保持
-     ・管理者操作や権限変更などを記録する監査ログ（GCP Audit Logs, Firebase Authentication の監査用ログ など）は最長400日間保持された後、自動削除されます。
+   - クラッシュレポート（Firebase Crashlytics）：アプリ端末のクラッシュ情報を収集し、最大90日間保持  
+   - 認証・通信ログ：Cloud Functions／Cloud Run などサーバサイドで出力される一般的なログ（INFO/WARN/ERROR 等）を30日間保持  
+   - 監査ログ：GCP Audit Logs や Firebase Authentication の操作ログを最長400日間保持
   6. AI支援機能で送信されたテキストデータは、OpenAI社のサーバーに最大30日間保存され、その後自動的に削除されます。ただし、法令等により削除ができない場合や例外的な保持義務がある場合を除きます。
 
   ## 第7条（免責事項）
@@ -206,10 +205,9 @@ privacy_content: |
   ## 第9条（アプリ内ログおよび利用状況データの取扱い）
 
   1.	本アプリは、品質向上や不具合調査を目的として、以下のログを収集します。
-     ・クラッシュレポート（Firebase Crashlytics） … 最大90日間保持
-     ・認証・通信ログ（Firebase Authentication、Realtime Database へのアクセスログ）
-       → Cloud Functions／Cloud Run から出力される一般的なアプリケーションログ（INFO, WARN, ERRORなど）は30日間保持
-     ・管理者操作や権限変更などを記録する監査ログ（GCP Audit Logs, Firebase Authentication の監査用ログ など）は最長400日間保持
+   - クラッシュレポート（Firebase Crashlytics）：アプリ端末のクラッシュ情報を収集し、最大90日間保持  
+   - 認証・通信ログ：Cloud Functions／Cloud Run などサーバサイドで出力される一般的なログ（INFO/WARN/ERROR 等）を30日間保持  
+   - 監査ログ：GCP Audit Logs や Firebase Authentication の操作ログを最長400日間保持
   2.	本アプリはWebViewを使用せず、クッキーを取得することはありません。Firebase Analytics等で利用状況を匿名かつ統計的に把握する場合があります。
 
   ## 第10条（プライバシーポリシーの変更）
