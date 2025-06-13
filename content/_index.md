@@ -46,7 +46,7 @@ description: "家族の知恵で楽しく生きる未来を創る"
         <p>心理カウンセラー向け<br>レポート作成支援アプリ</p>
         <div class="service-button appstore">
           <a href="https://apps.apple.com/jp/app/%E3%82%AB%E3%82%A6%E3%83%B3%E3%82%BB%E3%83%AB%E3%83%A1%E3%82%A4%E3%83%88-counselmate/id6743959922" target="_blank" rel="noopener">
-            <img src="/images/badges/Download_on_the_App_Store_Badge_JP_RGB_wht_100317.svg" alt="App Store からダウンロード" style="height:40px;">
+            <img src="/images/badges/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="App Store からダウンロード" style="height:40px;">
           </a>
         </div>
       </div>
