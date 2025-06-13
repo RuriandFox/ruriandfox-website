@@ -361,6 +361,17 @@ section {
   cursor: not-allowed;
 }
 
+.service-button.appstore {
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.service-button.appstore a {
+  padding: 0 !important;
+  background: none !important;
+}
+
 /* ニュースセクション */
 .news-section { 
   padding: 1rem 1rem !important;

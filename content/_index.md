@@ -44,7 +44,7 @@ description: "家族の知恵で楽しく生きる未来を創る"
       <div class="service-content">
         <h3>カウンセルメイト</h3>
         <p>心理カウンセラー向け<br>レポート作成支援アプリ</p>
-        <div class="service-button">
+        <div class="service-button appstore">
           <a href="#" target="_blank" rel="noopener">
             <img src="/images/badges/Download_on_the_App_Store_Badge_JP_RGB_wht_100317.svg" alt="App Store からダウンロード" style="height:40px;">
           </a>
