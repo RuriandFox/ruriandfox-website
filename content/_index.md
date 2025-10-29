@@ -25,10 +25,10 @@ description: "家族の知恵で楽しく生きる未来を創る"
     <div class="service-card">
       <div class="service-badge">Apps</div>
       <div class="service-image">
-        <img src="/images/exam-support.png" alt="小学校受験の見方" class="service-img">
+        <img src="/images/exam-support.png" alt="ぐんぐん！" class="service-img">
       </div>
       <div class="service-content">
-        <h3>おべんきょうのミカタ</h3>
+        <h3>ぐんぐん！</h3>
         <p>やることをシンプルに<br>幼児学習、お受験のお役立ちアプリ</p>
         <div class="service-button disabled">
           <span>coming soon</span>

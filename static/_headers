@@ -1,0 +1,3 @@
+/legal/gungun/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
