@@ -1,0 +1,17 @@
+name: Consent PDF Smoke Test
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run consent PDF smoke test
+        run: |
+          bash ./scripts/check_gungun_legal.sh
